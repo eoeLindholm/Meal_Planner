@@ -16,7 +16,7 @@ class CityGrossScraper:
 
     def run(self, username, password):
         self.driver = webdriver.Chrome(self.PATH)
-        self.login("eoelindholm@gmail.com", "Regel123")
+        self.login(username, password)
         self.goto_offers()
         self.expand_offers()
         self.offers = self.get_offers()
